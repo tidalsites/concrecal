@@ -1,0 +1,96 @@
+@use "../../styles/Colors.scss" as c;
+@use "../../styles/Utilities.scss" as u;
+
+.Packages {
+  background-color: c.$white;
+  position: relative;
+
+  > h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    padding-block: 0.5rem;
+    background-color: rgba(c.$black, 0.75);
+    color: c.$white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &__wrapper {
+    > p {
+      padding-bottom: 3rem;
+      max-width: 70ch;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+  }
+}
+
+.package {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("../../assets/proyecto-uno.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(c.$black, 0.25);
+
+  &:nth-child(1) {
+    background-image: url("../../assets/proyecto-uno.jpg");
+  }
+  &:nth-child(2) {
+    background-image: url("../../assets/proyecto-dos.jpg");
+  }
+  &:nth-child(3) {
+    background-image: url("../../assets/proyecto-tres.jpg");
+  }
+
+  > button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+
+    &:hover {
+      background-color: rgba(c.$black, 0.5);
+    }
+  }
+
+  &__title {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    color: c.$white;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      flex-grow: 1;
+    }
+
+    // button {
+    //   display: flex;
+    //   padding: 0.5rem 1rem;
+    //   width: fit-content;
+    //   margin-block: 1rem;
+    //   transition: all 250ms ease-in-out;
+    //   outline: 2px solid c.$white;
+    //   background-color: c.$white;
+
+    //   &:hover {
+    //     outline-offset: 2px;
+    //   }
+    // }
+  }
+}

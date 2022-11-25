@@ -5,8 +5,9 @@ import "./App.scss";
 import { Navbar } from "../Navbar/Navbar";
 import { Hero } from "../Hero/Hero";
 import { Nosotros } from "../Nosotros/Nosotros";
-import { Proyectos } from "../Proyectos/Proyectos";
+import { Packages } from "../Packages/Packages";
 import { Footer } from "../Footer/Footer";
+import { Models } from "../Models/Models";
 
 // State
 import { LangContext } from "../../state/context/Lang";
@@ -21,7 +22,8 @@ function App() {
         <Navbar />
         <Hero />
         <Nosotros />
-        <Proyectos />
+        <Packages />
+        <Models />
         <Footer />
       </div>
     </LangContext.Provider>

@@ -2,31 +2,12 @@
 @use "../../styles/Utilities.scss" as u;
 
 .Nosotros {
-  padding-inline: 1rem;
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  padding-block: 3rem;
-
-  &__wrapper {
-    max-width: u.$max-width;
-    margin-inline: auto;
-    width: 100%;
-  }
-
-  &__heading {
-    font-size: 2rem;
-    width: fit-content;
-    color: c.$black;
-    border-bottom: 5px solid c.$primary;
-    margin-bottom: 3rem;
-  }
-
   &__copy {
     max-width: 70ch;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-block: 3rem;
+    line-height: 1.8;
   }
 }

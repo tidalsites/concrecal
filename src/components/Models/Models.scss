@@ -1,0 +1,32 @@
+@use "../../styles/Colors.scss" as c;
+
+.Models {
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+    padding-block: 3rem;
+  }
+}
+
+.model {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: red;
+  background-image: url("../../assets/proyecto-uno.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  > span {
+    font-size: 1.5rem;
+    background-color: rgba(c.$black, 0.85);
+    color: c.$white;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+  }
+}

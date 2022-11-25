@@ -3,9 +3,9 @@ import "./Nosotros.scss";
 
 export const Nosotros: FC = () => {
   return (
-    <section className="Nosotros">
-      <div className="Nosotros__wrapper">
-        <h2 className="Nosotros__heading">Nosotros</h2>
+    <section className="Nosotros section">
+      <div className="Nosotros__wrapper section-wrapper">
+        <h2 className="Nosotros__heading section-heading">Nosotros</h2>
         <div className="Nosotros__copy">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,

@@ -5,6 +5,7 @@
   display: flex;
   background-color: c.$black;
   color: c.$white;
+  border-top: 8px double c.$white;
 
   &__wrapper {
     max-width: u.$max-width;
@@ -13,7 +14,7 @@
   }
 
   &__columns {
-    margin-block: 2rem;
+    margin-block: 1rem;
     display: flex;
     justify-content: space-between;
   }
@@ -43,6 +44,7 @@
     padding-block: 0.25rem;
     border-top: 1px solid c.$white;
     font-size: 0.75rem;
+    margin-top: 2rem;
   }
 
   &__hours {

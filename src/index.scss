@@ -1,4 +1,5 @@
 @use "./styles/Colors.scss" as c;
+@use "./styles/Utilities.scss" as u;
 
 *,
 *::before,
@@ -25,7 +26,7 @@ a {
 body {
   font-family: "Poppins", sans-serif;
   color: c.$black;
-  background-color: c.$gray;
+  background-color: c.$white;
 }
 
 ul {
@@ -34,12 +35,51 @@ ul {
 
 h2 {
   font-weight: 400;
-  border-bottom: 2px solid c.$primary;
   line-height: 1.7;
   width: max-content;
 }
 
+p {
+  max-width: 70ch;
+}
+
 // Utility classes
+
+.section {
+  display: flex;
+  flex-direction: column;
+  background-color: c.$white;
+  padding-block: 3rem;
+}
+
+.section--inverted {
+  display: flex;
+  flex-direction: column;
+  // padding-top: 3rem;
+  background-color: c.$primary;
+  color: c.$white;
+}
+
+.section-wrapper {
+  max-width: u.$max-width;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  width: 100%;
+}
+
+.section-heading {
+  font-size: 2rem;
+  border-bottom: 5px solid c.$primary;
+  background-color: c.$white;
+  margin-bottom: 2rem;
+}
+
+.section-heading--inverted {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 5px solid c.$white;
+  background-color: c.$primary;
+}
 
 .no-scroll {
   overflow: hidden;
