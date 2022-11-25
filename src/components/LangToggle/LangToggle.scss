@@ -1,0 +1,29 @@
+@use "../../styles/Colors.scss" as c;
+
+$height: 1rem;
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-left: 1rem;
+  color: c.$white;
+  font-size: 0.75rem;
+  transition: background-color 350ms ease-in, color 350ms ease-in;
+
+  &-alt {
+    color: c.$black;
+  }
+
+  &__btn {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > svg {
+      color: c.$secondary;
+      font-size: 2.25rem;
+    }
+  }
+}

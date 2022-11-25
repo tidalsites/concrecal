@@ -1,0 +1,64 @@
+@use "../../styles/Utilities.scss" as u;
+@use "../../styles/Colors.scss" as c;
+
+.Footer {
+  display: flex;
+  background-color: c.$black;
+  color: c.$white;
+
+  &__wrapper {
+    max-width: u.$max-width;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  &__columns {
+    margin-block: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column-header {
+    font-size: 1.25rem;
+    margin-block: 2rem;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    > a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      word-break: break-word;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-block: 0.25rem;
+    border-top: 1px solid c.$white;
+    font-size: 0.75rem;
+  }
+
+  &__hours {
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@use "./styles/Colors.scss" as c;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: c.$black;
+  background-color: c.$gray;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h2 {
+  font-weight: 400;
+  border-bottom: 2px solid c.$primary;
+  line-height: 1.7;
+  width: max-content;
+}
+
+// Utility classes
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: c.$primary;
+  color: c.$white;
+}
+
+.br-primary {
+  border-radius: 0.5rem;
+}
+
+// Link offset for sticky navbar
+// Will need to change if navbar height changes
+.link-target {
+  scroll-margin-top: 106px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}

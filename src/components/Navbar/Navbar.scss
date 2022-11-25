@@ -1,0 +1,93 @@
+@use "../../styles/Colors.scss" as c;
+@use "../../styles/Utilities.scss" as u;
+
+.Navbar {
+  background-color: c.$white;
+  padding: 1rem;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+
+  &__wrapper {
+    max-width: u.$max-width;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: fit-content;
+    display: grid;
+    place-content: center;
+    box-shadow: 0 0 2px 1px c.$primary;
+    border-radius: 0.25rem;
+    padding-inline: 0.25rem;
+    background-color: c.$white;
+
+    img {
+      width: 100px;
+      border-radius: 0.25rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+
+  &__smedia {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      color: c.$secondary;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    color: c.$dark-gray;
+    flex-grow: 1;
+
+    ul {
+      display: flex;
+      gap: 1rem;
+    }
+
+    a {
+      position: relative;
+      padding-block: 0.5rem;
+    }
+
+    a:hover {
+      color: c.$black;
+    }
+
+    a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    a[data-active="true"] {
+      color: c.$primary;
+    }
+
+    a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: c.$secondary;
+      transition: all 250ms ease-in-out;
+    }
+  }
+}
