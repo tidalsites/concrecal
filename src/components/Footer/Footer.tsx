@@ -9,7 +9,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 export const Footer: FC = () => {
   const lang = "es";
   return (
-    <footer className="Footer">
+    <footer className="Footer" id="footer">
       <div className="Footer__wrapper">
         <div className="Footer__columns">
           <div className="Footer__contact">

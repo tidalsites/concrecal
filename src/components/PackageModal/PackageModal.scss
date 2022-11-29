@@ -1,0 +1,48 @@
+@use "../../styles/Colors.scss" as c;
+
+.PackageModal {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(c.$black, 0.75);
+  z-index: 5;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  animation: fadeIn 250ms forwards;
+
+  > button {
+    padding: 1rem;
+    width: fit-content;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &__wrapper {
+    width: clamp(300px, 100vw, 800px);
+    background-color: c.$white;
+    padding: 1rem;
+    transform: translateY(-100vh);
+    animation: slideDown 800ms forwards;
+  }
+}
+
+@keyframes slideDown {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}

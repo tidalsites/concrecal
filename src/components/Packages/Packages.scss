@@ -5,17 +5,49 @@
   background-color: c.$white;
   position: relative;
 
-  > h2 {
-    text-align: center;
-    width: 100%;
-    font-size: 2rem;
-    padding-block: 0.5rem;
-    background-color: rgba(c.$black, 0.75);
-    color: c.$white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+  &__heading-container {
+    background-color: c.$white;
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+
+    > h2 {
+      margin-inline: auto;
+      margin-block: 2rem;
+      font-size: 2rem;
+      background-color: c.$white;
+      display: flex;
+
+      > span {
+        padding-inline: 0.5rem;
+        text-transform: uppercase;
+      }
+
+      .icon-group {
+        display: flex;
+        align-items: center;
+        color: c.$primary;
+
+        svg {
+          display: grid;
+          place-content: center;
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 25%;
+      right: 25%;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2px;
+      background-color: c.$primary;
+      z-index: -1;
+    }
   }
 
   &__wrapper {

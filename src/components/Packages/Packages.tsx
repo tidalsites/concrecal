@@ -1,27 +1,38 @@
-import { FC } from "react";
+import { FC, SetStateAction, Dispatch } from "react";
 import "./Packages.scss";
 
-export const Packages: FC = () => {
+// Components
+import { SectionHeading } from "../SectionHeading/SectionHeading";
+
+// Types
+import { PackageName } from "../PackageModal/PackageModal";
+
+interface IPackagesProps {
+  setModal: Dispatch<SetStateAction<PackageName>>;
+}
+
+export const Packages: FC<IPackagesProps> = ({ setModal }) => {
   return (
-    <section className="Packages">
-      <h2>Opciones</h2>
+    <section className="Packages" id="paquetes">
+      <SectionHeading heading="Elige su paquete" />
+
       <div className="Packages__content">
         <div className="package">
-          <button>
+          <button onClick={() => setModal("formaleta")}>
             <p className="package__title">
               <span>Formaleta y Encofrado</span>
             </p>
           </button>
         </div>
         <div className="package">
-          <button>
+          <button onClick={() => setModal("gris")}>
             <p className="package__title">
-              <span>Hobra Gris</span>
+              <span>Obra Gris</span>
             </p>
           </button>
         </div>
         <div className="package">
-          <button>
+          <button onClick={() => setModal("todo")}>
             <p className="package__title">
               <span>Todo Costo</span>
             </p>

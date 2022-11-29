@@ -10,12 +10,13 @@
     "deploy-staging": "aws s3 sync dist/ s3://concrecal-staging"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.56.1",
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@mui/icons-material": "^5.8.4"
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",

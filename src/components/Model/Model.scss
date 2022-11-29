@@ -1,0 +1,52 @@
+@use "../../styles/Colors.scss" as c;
+
+.model {
+  display: flex;
+  flex-direction: column;
+  background-color: c.$white;
+  color: c.$black;
+  padding: 1rem;
+  border-top: 2px solid c.$primary;
+  border-bottom: 2px solid c.$primary;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      background-color: transparent;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    padding: 0.25rem;
+  }
+
+  &__content {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      flex-grow: 1;
+      padding: 0.25rem;
+      text-align: center;
+      border-right: 2px solid c.$primary;
+
+      &:nth-last-child(1) {
+        border-right: none;
+      }
+    }
+  }
+}

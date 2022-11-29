@@ -50,13 +50,19 @@ export const Navbar: FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#">Nosotros</a>
+                <a href="#nosotros">Nosotros</a>
               </li>
               <li>
-                <a href="#">Proyectos</a>
+                <a href="#modelos">Modelos</a>
               </li>
               <li>
-                <a href="#">Contacto</a>
+                <a href="#paquetes">Paquetes</a>
+              </li>
+              <li>
+                <a href="#proyectos">Proyectos</a>
+              </li>
+              <li>
+                <a href="#footer">Contacto</a>
               </li>
             </ul>
           </nav>
