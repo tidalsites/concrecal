@@ -1,0 +1,93 @@
+@use "../../styles/Colors.scss" as c;
+
+.MobileMenu {
+  display: grid;
+  gap: 1rem;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(c.$black, 0.9);
+  opacity: 0;
+  animation: fadeIn 250ms forwards;
+  margin: 0;
+
+  &__wrapper {
+    background: c.$white;
+    width: min(25em, 100vw);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 30rem;
+    border: 2px solid c.$primary;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 4px 2px c.$black;
+    transform: translateY(-100vh);
+    animation: slideDown 550ms forwards;
+  }
+
+  &__close {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    padding-bottom: 0;
+
+    > button {
+      border: none;
+      background-color: c.$white;
+      margin-left: auto;
+
+      > svg {
+        min-height: 25px;
+        min-width: 25px;
+      }
+    }
+  }
+
+  nav {
+    height: 100%;
+    color: c.$black;
+    flex-grow: 1;
+  }
+
+  &__list {
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    a {
+      padding: 1rem;
+      width: 100%;
+    }
+
+    a:hover,
+    a:focus {
+      background: c.$primary;
+      color: c.$white;
+      padding: 1rem;
+    }
+  }
+}
+
+@keyframes slideDown {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}

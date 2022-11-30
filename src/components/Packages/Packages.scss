@@ -58,14 +58,21 @@
   }
 
   &__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: 1fr 1fr 1fr;
     gap: 0;
+
+    @media (min-width: u.$mobile-breakpoint) {
+      flex-direction: row;
+    }
   }
 }
 
 .package {
   width: 100%;
+  max-width: 30em;
+  margin-inline: auto;
   aspect-ratio: 9 / 16;
   max-height: 600px;
   display: flex;
@@ -76,6 +83,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(c.$black, 0.25);
+
+  @media (min-width: u.$mobile-breakpoint) {
+    max-width: unset;
+    margin-inline: unset;
+  }
 
   &:nth-child(1) {
     background-image: url("../../assets/proyecto-uno.jpg");

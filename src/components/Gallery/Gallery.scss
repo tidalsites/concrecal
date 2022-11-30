@@ -1,3 +1,5 @@
+@use "../../styles/Utilities.scss" as u;
+
 .Gallery {
   padding: 1rem;
   &__heading {
@@ -7,10 +9,15 @@
   }
 
   &__slider {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: auto;
+    // gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    justify-content: center;
   }
 
   &__item {
@@ -19,8 +26,12 @@
       display: flex;
       max-width: 100%;
       aspect-ratio: 1;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 0.5rem;
+
+      @media (min-width: u.$mobile-breakpoint) {
+        max-width: 25em;
+      }
     }
   }
 }

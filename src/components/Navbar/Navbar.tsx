@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { Dispatch, FC, SetStateAction, useState } from "react";
 import "./Navbar.scss";
 
 // Images
@@ -6,6 +6,7 @@ import logo from "../../assets/logo.jpg";
 
 // Components
 import { LangToggle } from "../LangToggle/LangToggle";
+import { MobileMenu } from "../MobileMenu/MobileMenu";
 
 // Icons
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -15,6 +16,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import MenuIcon from "@mui/icons-material/Menu";
 
 export const Navbar: FC = () => {
+  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   return (
     <div className="Navbar">
       <div className="Navbar__wrapper">
@@ -69,13 +71,17 @@ export const Navbar: FC = () => {
               </ul>
             </nav>
             <div className="Navbar__menu">
-              <button aria-label="Open mobile menu">
+              <button
+                onClick={() => setMobileMenu(true)}
+                aria-label="Open mobile menu"
+              >
                 <MenuIcon />
               </button>
             </div>
           </div>
         </div>
       </div>
+      {mobileMenu && <MobileMenu setMobileMenu={setMobileMenu} />}
     </div>
   );
 };

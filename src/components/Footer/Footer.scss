@@ -6,6 +6,7 @@
   background-color: c.$black;
   color: c.$white;
   border-top: 8px double c.$white;
+  padding-inline: 1rem;
 
   &__wrapper {
     max-width: u.$max-width;
@@ -16,12 +17,15 @@
   &__columns {
     margin-block: 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 2rem;
   }
 
   &__column-header {
     font-size: 1.25rem;
-    margin-block: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
   }
 
   &__contact {
