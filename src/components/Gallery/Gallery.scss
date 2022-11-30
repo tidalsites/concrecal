@@ -1,4 +1,5 @@
 .Gallery {
+  padding: 1rem;
   &__heading {
     font-size: 2rem;
     padding-block: 2rem;
@@ -7,19 +8,19 @@
 
   &__slider {
     display: grid;
-    // grid-auto-flow: row;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 1rem;
-    // grid-auto-columns: 100%;
   }
 
   &__item {
+    border-radius: 0.125rem;
     img {
       display: flex;
       max-width: 100%;
       aspect-ratio: 1;
       object-fit: cover;
+      border-radius: 0.5rem;
     }
   }
 }

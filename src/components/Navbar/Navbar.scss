@@ -14,6 +14,7 @@
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__logo {
@@ -26,8 +27,12 @@
     background-color: c.$white;
 
     img {
-      width: 100px;
+      width: 50px;
       border-radius: 0.25rem;
+
+      @media (min-width: u.$mobile-breakpoint) {
+        width: 100px;
+      }
     }
   }
 
@@ -47,6 +52,7 @@
 
     a {
       color: c.$secondary;
+      display: none;
     }
   }
 
@@ -55,6 +61,13 @@
     align-items: center;
     color: c.$dark-gray;
     flex-grow: 1;
+
+    nav {
+      display: none;
+      @media (min-width: u.$mobile-breakpoint) {
+        display: flex;
+      }
+    }
 
     ul {
       display: flex;
@@ -88,6 +101,20 @@
       height: 2px;
       background-color: c.$secondary;
       transition: all 250ms ease-in-out;
+    }
+  }
+
+  &__menu {
+    button {
+      background-color: c.$white;
+
+      > svg {
+        min-height: 35px;
+        min-width: 35px;
+      }
+    }
+    @media (min-width: u.$mobile-breakpoint) {
+      display: none;
     }
   }
 }

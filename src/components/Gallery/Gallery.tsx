@@ -10,7 +10,7 @@ import { SectionHeading } from "../SectionHeading/SectionHeading";
 export const Gallery: FC = () => {
   return (
     <section className="Gallery" id="proyectos">
-      <SectionHeading heading="Proyectos completados" />
+      <SectionHeading heading="ver proyectos terminados" />
       <div className="Gallery__content">
         <div className="Gallery__slider">
           <div className="Gallery__item">

@@ -12,6 +12,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export const Navbar: FC = () => {
   return (
@@ -42,30 +43,37 @@ export const Navbar: FC = () => {
               <EmailIcon />
             </a>
           </div>
-          <nav className="Navbar__nav">
-            <ul>
-              <li>
-                <a href="#" data-active="true">
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a href="#nosotros">Nosotros</a>
-              </li>
-              <li>
-                <a href="#modelos">Modelos</a>
-              </li>
-              <li>
-                <a href="#paquetes">Paquetes</a>
-              </li>
-              <li>
-                <a href="#proyectos">Proyectos</a>
-              </li>
-              <li>
-                <a href="#footer">Contacto</a>
-              </li>
-            </ul>
-          </nav>
+          <div className="Navbar__nav">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#" data-active="true">
+                    Inicio
+                  </a>
+                </li>
+                <li>
+                  <a href="#nosotros">Nosotros</a>
+                </li>
+                <li>
+                  <a href="#modelos">Modelos</a>
+                </li>
+                <li>
+                  <a href="#paquetes">Paquetes</a>
+                </li>
+                <li>
+                  <a href="#proyectos">Proyectos</a>
+                </li>
+                <li>
+                  <a href="#footer">Contacto</a>
+                </li>
+              </ul>
+            </nav>
+            <div className="Navbar__menu">
+              <button aria-label="Open mobile menu">
+                <MenuIcon />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

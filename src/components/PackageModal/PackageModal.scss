@@ -5,27 +5,40 @@
   inset: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(c.$black, 0.75);
+  background-color: rgba(c.$black, 0.85);
   z-index: 5;
   display: grid;
   place-content: center;
   opacity: 0;
-  animation: fadeIn 250ms forwards;
+  animation: fadeIn 350ms forwards;
 
   > button {
-    padding: 1rem;
+    padding: 0.5rem;
     width: fit-content;
     position: absolute;
     top: 1rem;
     right: 1rem;
+    background-color: transparent;
+    color: c.$white;
+    font-size: 1.75rem;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      scale: 1.05;
+    }
   }
 
   &__wrapper {
-    width: clamp(300px, 100vw, 800px);
     background-color: c.$white;
-    padding: 1rem;
+    padding: 2rem 1rem;
     transform: translateY(-100vh);
     animation: slideDown 800ms forwards;
+    box-shadow: 0 0 4px 1px c.$black;
+  }
+
+  &__title {
+    padding-block: 0.5rem;
+    text-transform: capitalize;
   }
 }
 

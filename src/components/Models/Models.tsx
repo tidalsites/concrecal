@@ -1,10 +1,11 @@
-import { FC, useRef } from "react";
+import { FC, useEffect, useState } from "react";
 
 // Styles
 import "./Models.scss";
 import "swiper/css";
 
 // Libraries
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 // Icons
@@ -17,23 +18,33 @@ import { SectionHeading } from "../SectionHeading/SectionHeading";
 
 export const Models: FC = () => {
   const swiper = useSwiper();
+  const [slidesPerView, setSlidesPerView] = useState<number>(
+    window.screen.width <= 800 ? 1 : 2
+  );
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.screen.width > 800 && slidesPerView !== 2) {
+        setSlidesPerView(2);
+      } else if (window.screen.width <= 800 && slidesPerView === 2) {
+        setSlidesPerView(1);
+      }
+    });
+  }, []);
   return (
     <section className="Models" id="modelos">
       <SectionHeading heading="Elige su modelo" />
       <div className="Models__content">
         <Swiper
-          slidesPerView={2}
+          modules={[Navigation]}
+          slidesPerView={slidesPerView}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
+          navigation={{
+            nextEl: ".swiper-next",
+            prevEl: ".swiper-prev",
+          }}
         >
-          <div className="swiper__buttons">
-            <button onClick={() => swiper.slidePrev()}>
-              <ArrowBackIos fontSize="large" />
-            </button>
-            <button onClick={() => swiper.slideNext()}>
-              <ArrowForwardIos fontSize="large" />
-            </button>
-          </div>
           <SwiperSlide>
             <Model
               nombre="Model A"
@@ -70,6 +81,19 @@ export const Models: FC = () => {
               niveles={2}
             />
           </SwiperSlide>
+          <div className="swiper__buttons">
+            <button onClick={() => swiper.slidePrev()}>
+              <ArrowBackIos fontSize="large" />
+            </button>
+            <button
+              className="swiper-next"
+              onClick={() => {
+                console.log(swiper);
+              }}
+            >
+              <ArrowForwardIos fontSize="large" />
+            </button>
+          </div>
         </Swiper>
       </div>
     </section>

@@ -7,11 +7,12 @@
   isolation: isolate;
   display: flex;
   align-items: center;
+  font-family: "Cinzel";
 
   > h2 {
     margin-inline: auto;
     margin-block: 2rem;
-    font-size: 2rem;
+    font-size: 1.25rem;
     background-color: c.$white;
     display: flex;
 
@@ -30,13 +31,20 @@
         place-content: center;
       }
     }
+
+    @media (min-width: 40em) {
+      font-size: 1.75rem;
+    }
   }
 
   &:after {
     content: "";
     position: absolute;
-    left: 25%;
-    right: 25%;
+    width: 100%;
+    max-width: 50rem;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     height: 2px;
