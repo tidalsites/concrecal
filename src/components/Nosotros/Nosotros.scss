@@ -77,8 +77,12 @@
     color: c.$white;
     border-top: 8px double c.$white;
     border-bottom: 8px double c.$white;
-    border-left: 8px double c.$white;
+
     position: relative;
+
+    @media (min-width: u.$mobile-breakpoint) {
+      border-left: 8px double c.$white;
+    }
 
     &__btn-group {
       position: absolute;

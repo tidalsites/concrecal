@@ -33,7 +33,7 @@ export const Models: FC = () => {
   }, []);
   return (
     <section className="Models" id="modelos">
-      <SectionHeading heading="Elige su modelo" />
+      <SectionHeading heading="Elige su tipo" />
       <div className="Models__content">
         <Swiper
           modules={[Navigation]}
@@ -47,38 +47,42 @@ export const Models: FC = () => {
         >
           <SwiperSlide>
             <Model
-              nombre="Model A"
-              habitaciones={3}
+              nombre="Tipo A"
+              habitaciones={2}
               banos={2}
-              metros={240}
+              metros={100}
               niveles={1}
+              img="a"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Model
-              nombre="Model B"
+              nombre="Tipo B"
               habitaciones={2}
               banos={1}
               metros={240}
               niveles={1}
+              img="b"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Model
-              nombre="Model C"
+              nombre="Tipo C"
               habitaciones={3}
-              banos={2}
-              metros={280}
+              banos={2.5}
+              metros={140}
               niveles={2}
+              img="c"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Model
-              nombre="Model D"
-              habitaciones={3}
-              banos={2}
-              metros={300}
-              niveles={2}
+              nombre="Tipo D"
+              habitaciones={2}
+              banos={1}
+              metros={68}
+              niveles={1}
+              img="d"
             />
           </SwiperSlide>
           <div className="swiper__buttons">
