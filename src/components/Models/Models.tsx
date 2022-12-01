@@ -82,7 +82,7 @@ export const Models: FC = () => {
             />
           </SwiperSlide>
           <div className="swiper__buttons">
-            <button onClick={() => swiper.slidePrev()}>
+            <button className="swiper-prev" onClick={() => swiper.slidePrev()}>
               <ArrowBackIos fontSize="large" />
             </button>
             <button
