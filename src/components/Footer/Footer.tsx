@@ -5,6 +5,7 @@ import "./Footer.scss";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import Facebook from "@mui/icons-material/Facebook";
 
 export const Footer: FC = () => {
   const lang = "es";
@@ -16,20 +17,27 @@ export const Footer: FC = () => {
             <span className="Footer__column-header">
               {lang == "es" ? "Contacto" : "Contact"}
             </span>
-            <a href="https://wa.me/" target="_blank">
+            <a href="https://wa.me/18292309202" target="_blank">
               <WhatsAppIcon />
-              <span>+1 (555) 555-5555</span>
+              <span>+1 (829) 230-9202</span>
             </a>
             <a href="mailto:info@concrecalproyectos.com" target="_blank">
               <EmailIcon />
               <span>info@concrecalproyectos.com</span>
             </a>
             <a
-              href="https://www.instagram.com/expertohomepuntacana/"
+              href="https://www.instagram.com/concrecalproyectos"
               target="_blank"
             >
               <InstagramIcon />
-              <span>Instagram</span>
+              <span>@concrecalproyectos</span>
+            </a>
+            <a
+              href="https://www.facebook.com/concrecal.proyectos"
+              target="_blank"
+            >
+              <Facebook />
+              <span>concrecal proyectos</span>
             </a>
           </div>
           <div className="Footer__hours">

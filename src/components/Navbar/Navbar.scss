@@ -21,14 +21,9 @@
     height: fit-content;
     display: grid;
     place-content: center;
-    box-shadow: 0 0 2px 1px c.$primary;
-    border-radius: 0.25rem;
-    padding-inline: 0.25rem;
-    background-color: c.$white;
 
     img {
       width: 50px;
-      border-radius: 0.25rem;
 
       @media (min-width: u.$mobile-breakpoint) {
         width: 100px;
@@ -42,6 +37,7 @@
     justify-content: space-around;
     align-items: flex-end;
     flex-grow: 1;
+    gap: 1rem;
   }
 
   &__smedia {
@@ -53,6 +49,10 @@
     a {
       color: c.$secondary;
       display: none;
+
+      @media (min-width: u.$mobile-breakpoint) {
+        display: block;
+      }
     }
   }
 

@@ -1,14 +1,15 @@
-import { Dispatch, FC, SetStateAction, useState } from "react";
+import { FC, useState } from "react";
 import "./Navbar.scss";
 
 // Images
 import logo from "../../assets/logo.jpg";
+import updatedLogo from "../../assets/logo-updated.svg";
 
 // Components
 import { LangToggle } from "../LangToggle/LangToggle";
 import { MobileMenu } from "../MobileMenu/MobileMenu";
 
-// Icons
+// Iconswidth
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -21,12 +22,12 @@ export const Navbar: FC = () => {
     <div className="Navbar">
       <div className="Navbar__wrapper">
         <div className="Navbar__logo">
-          <img src={logo} alt="Concrecal Proyectos e Ingeneria SRL" />
+          <img src={updatedLogo} alt="Concrecal Proyectos e Ingeneria SRL" />
         </div>
         <div className="Navbar__links">
           <div className="Navbar__smedia">
             <LangToggle alt={true} />
-            <a href="">
+            <a href="https://wa.me/18292309202">
               <WhatsAppIcon />
             </a>
             <a
@@ -41,7 +42,7 @@ export const Navbar: FC = () => {
             >
               <FacebookIcon />
             </a>
-            <a href="">
+            <a href="mailto:info@concrecalproyectos.com">
               <EmailIcon />
             </a>
           </div>

@@ -117,8 +117,12 @@
           left: 0;
         }
 
-        > div {
+        > div:nth-child(2) {
           left: 100%;
+        }
+
+        > div:nth-child(3) {
+          left: 200%;
         }
       }
 

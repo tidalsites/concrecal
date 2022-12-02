@@ -43,43 +43,11 @@ p {
   max-width: 70ch;
 }
 
+section {
+  background-color: c.$white;
+}
+
 // Utility classes
-
-.section {
-  display: flex;
-  flex-direction: column;
-  background-color: c.$white;
-  padding-block: 3rem;
-}
-
-.section--inverted {
-  display: flex;
-  flex-direction: column;
-  // padding-top: 3rem;
-  background-color: c.$primary;
-  color: c.$white;
-}
-
-.section-wrapper {
-  max-width: u.$max-width;
-  margin-inline: auto;
-  padding-inline: 1rem;
-  width: 100%;
-}
-
-.section-heading {
-  font-size: 2rem;
-  border-bottom: 5px solid c.$primary;
-  background-color: c.$white;
-  margin-bottom: 2rem;
-}
-
-.section-heading--inverted {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  border-bottom: 5px solid c.$white;
-  background-color: c.$primary;
-}
 
 .no-scroll {
   overflow: hidden;

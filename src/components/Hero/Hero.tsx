@@ -10,7 +10,7 @@ export const Hero: FC = () => {
       </video>
       <div className="Hero__content">
         <div className="Hero__content__wrapper">
-          <p>Start with a solid foundation</p>
+          <p>Comience con una base sólida</p>
         </div>
       </div>
     </section>

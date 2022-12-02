@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import "./Nosotros.scss";
 
 // Components
@@ -13,6 +13,7 @@ type SlideStateIndex = 0 | 1 | 2;
 
 export const Nosotros: FC = () => {
   const [activeSlide, setActiveSlide] = useState<SlideStateIndex>(0);
+  // const [autoPlay, setAutoPlay] = useState<boolean>(true);
 
   const prevSlide: () => SlideStateIndex = () => {
     switch (activeSlide) {
@@ -36,9 +37,33 @@ export const Nosotros: FC = () => {
     }
   };
 
+  // TODO - Fix autoplay and pause mechanism
+
+  // useEffect(() => {
+  //   let autoPlayInterval;
+  //   if (autoPlay) {
+  //     autoPlayInterval = setInterval(() => {
+  //       switch (activeSlide) {
+  //         case 0:
+  //           setActiveSlide(1);
+  //           break;
+  //         case 1:
+  //           setActiveSlide(2);
+  //           break;
+  //         case 2:
+  //           setActiveSlide(0);
+  //           break;
+  //         default:
+  //           break;
+  //       }
+  //     }, 3000);
+  //   } else {
+  //     clearInterval(autoPlayInterval);
+  //   }
+  // }, [activeSlide, autoPlay]);
+
   return (
     <section className="Nosotros" id="nosotros">
-      {/* <div className="Nosotros__wrapper section-wrapper"> */}
       <SectionHeading heading="Sobre Nosotros" />
       <div className="Nosotros__content">
         <div className="Nosotros__copy">
@@ -46,20 +71,24 @@ export const Nosotros: FC = () => {
           <p>
             Empresa destinada a la Dirección y ejecución de proyectos, e
             infraestructuras y Expertos en Infraestructuras y Viviendas en
-            concreto armado con el sistema WTF con moldes de aluminio .
+            concreto armado con el sistema WTF con moldes de aluminio.
           </p>
         </div>
         <div className="Nosotros__statement">
           <div className="Nosotros__statement__btn-group">
             <button
               data-visible={activeSlide !== 0}
-              onClick={() => setActiveSlide(prevSlide())}
+              onClick={() => {
+                setActiveSlide(prevSlide());
+              }}
             >
               <ArrowBackIos />
             </button>
             <button
               data-visible={activeSlide !== 2}
-              onClick={() => setActiveSlide(nextSlide())}
+              onClick={() => {
+                setActiveSlide(nextSlide());
+              }}
             >
               <ArrowForwardIos />
             </button>
@@ -111,8 +140,6 @@ export const Nosotros: FC = () => {
           </div>
         </div>
       </div>
-
-      {/* </div> */}
     </section>
   );
 };

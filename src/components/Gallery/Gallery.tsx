@@ -6,6 +6,8 @@ import gallery1 from "../../assets/gallery1.jpg";
 import gallery2 from "../../assets/gallery2.jpg";
 import gallery3 from "../../assets/gallery3.jpg";
 import gallery4 from "../../assets/gallery4.jpg";
+import gallery5 from "../../assets/gallery5.jpg";
+import gallery6 from "../../assets/gallery6.jpg";
 
 // Components
 import { SectionHeading } from "../SectionHeading/SectionHeading";
@@ -27,6 +29,12 @@ export const Gallery: FC = () => {
           </div>
           <div className="Gallery__item">
             <img src={gallery4} alt="" />
+          </div>
+          <div className="Gallery__item">
+            <img src={gallery5} alt="" />
+          </div>
+          <div className="Gallery__item">
+            <img src={gallery6} alt="" />
           </div>
         </div>
       </div>

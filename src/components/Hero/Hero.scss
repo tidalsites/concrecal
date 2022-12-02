@@ -1,28 +1,30 @@
+@use "../../styles/Colors.scss" as c;
 @use "../../styles/Utilities.scss" as u;
 
 .Hero {
-  isolation: isolate;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   width: 100vw;
   height: 100vh;
   position: relative;
+  z-index: -1;
 
   video {
-    position: absolute;
+    position: fixed;
     left: 0;
-    bottom: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     object-fit: cover;
   }
 
   &__content {
-    background-color: rgba(black, 0.45);
+    background-color: rgba(black, 0.65);
+    margin-top: u.$navbar-height;
     padding: 2rem 1rem;
     color: white;
+    z-index: 2;
 
     &__wrapper {
       max-width: u.$max-width;
@@ -31,8 +33,8 @@
 
     p {
       font-size: 3rem;
-      font-weight: bold;
       text-transform: uppercase;
+      text-align: center;
     }
   }
 }
