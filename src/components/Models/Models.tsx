@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 
 // Styles
 import "./Models.scss";
@@ -16,11 +16,16 @@ import { ArrowForwardIos } from "@mui/icons-material";
 import { Model } from "../Model/Model";
 import { SectionHeading } from "../SectionHeading/SectionHeading";
 
+// State
+import { LangContext } from "../../state/context/Lang";
+
 export const Models: FC = () => {
   const swiper = useSwiper();
   const [slidesPerView, setSlidesPerView] = useState<number>(
     window.screen.width <= 800 ? 1 : 2
   );
+
+  const { lang } = useContext(LangContext);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -33,13 +38,13 @@ export const Models: FC = () => {
   }, []);
   return (
     <section className="Models" id="modelos">
-      <SectionHeading heading="Elige su tipo" />
+      <SectionHeading
+        heading={lang === "es" ? "Elige su tipo" : "Choose your model"}
+      />
       <div className="Models__content">
         <Swiper
           modules={[Navigation]}
           slidesPerView={slidesPerView}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
           navigation={{
             nextEl: ".swiper-next",
             prevEl: ".swiper-prev",
@@ -47,7 +52,7 @@ export const Models: FC = () => {
         >
           <SwiperSlide>
             <Model
-              nombre="Tipo A"
+              nombre={lang === "es" ? "Tipo A" : "Type A"}
               habitaciones={2}
               banos={2}
               metros={100}
@@ -57,7 +62,7 @@ export const Models: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Model
-              nombre="Tipo B"
+              nombre={lang === "es" ? "Tipo B" : "Type B"}
               habitaciones={2}
               banos={1}
               metros={240}
@@ -67,7 +72,7 @@ export const Models: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Model
-              nombre="Tipo C"
+              nombre={lang === "es" ? "Tipo C" : "Type C"}
               habitaciones={3}
               banos={2.5}
               metros={140}
@@ -77,7 +82,7 @@ export const Models: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Model
-              nombre="Tipo D"
+              nombre={lang === "es" ? "Tipo D" : "Type D"}
               habitaciones={2}
               banos={1}
               metros={68}
@@ -89,12 +94,7 @@ export const Models: FC = () => {
             <button className="swiper-prev" onClick={() => swiper.slidePrev()}>
               <ArrowBackIos fontSize="large" />
             </button>
-            <button
-              className="swiper-next"
-              onClick={() => {
-                console.log(swiper);
-              }}
-            >
+            <button className="swiper-next">
               <ArrowForwardIos fontSize="large" />
             </button>
           </div>

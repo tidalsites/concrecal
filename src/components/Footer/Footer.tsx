@@ -1,14 +1,17 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import "./Footer.scss";
 
-// Icons\
+// Icons
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Facebook from "@mui/icons-material/Facebook";
 
+// State
+import { LangContext } from "../../state/context/Lang";
+
 export const Footer: FC = () => {
-  const lang = "es";
+  const { lang } = useContext(LangContext);
   return (
     <footer className="Footer" id="footer">
       <div className="Footer__wrapper">

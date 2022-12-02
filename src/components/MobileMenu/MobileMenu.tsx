@@ -31,32 +31,32 @@ export const MobileMenu: FC<IMobileMenuProps> = ({ setMobileMenu }) => {
           <ul className="MobileMenu__list">
             <li>
               <a onClick={closeMenu} href="#">
-                {lang == "en" ? "Home" : "Inicio"}
+                {lang === "es" ? "Inicio" : "Home"}
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#nosotros">
-                {lang == "en" ? "About" : "Nosotros"}
+                {lang === "es" ? "Nosotros" : "About"}
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#modelos">
-                {lang == "en" ? "Models" : "Modelos"}
+                {lang === "es" ? "Modelos" : "Models"}
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#paquetes">
-                {lang == "en" ? "Packages" : "Paquetes"}
+                {lang === "es" ? "Paquetes" : "Packages"}
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#proyectos">
-                {lang == "en" ? "Projects" : "Proyectos"}
+                {lang === "es" ? "Proyectos" : "Projects"}
               </a>
             </li>
             <li>
               <a onClick={closeMenu} href="#footer">
-                {lang == "en" ? "Contact" : "Contacto"}
+                {lang === "es" ? "Contacto" : "Contact"}
               </a>
             </li>
           </ul>

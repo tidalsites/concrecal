@@ -4,10 +4,11 @@
 .Navbar {
   background-color: c.$white;
   padding: 1rem;
-  z-index: 3;
-  position: absolute;
+  z-index: 5;
+  position: fixed;
   top: 0;
   width: 100vw;
+  border-bottom: 1px solid c.$secondary;
 
   &__wrapper {
     max-width: u.$max-width;

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import "./Gallery.scss";
 
 // Images
@@ -12,10 +12,18 @@ import gallery6 from "../../assets/gallery6.jpg";
 // Components
 import { SectionHeading } from "../SectionHeading/SectionHeading";
 
+// State
+import { LangContext } from "../../state/context/Lang";
+
 export const Gallery: FC = () => {
+  const { lang } = useContext(LangContext);
   return (
     <section className="Gallery" id="proyectos">
-      <SectionHeading heading="ver proyectos terminados" />
+      <SectionHeading
+        heading={
+          lang === "es" ? "ver proyectos terminados" : "View completed projects"
+        }
+      />
       <div className="Gallery__content">
         <div className="Gallery__slider">
           <div className="Gallery__item">

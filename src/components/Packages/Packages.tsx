@@ -1,4 +1,4 @@
-import { FC, SetStateAction, Dispatch } from "react";
+import { FC, SetStateAction, Dispatch, useContext } from "react";
 import "./Packages.scss";
 
 // Components
@@ -7,47 +7,44 @@ import { SectionHeading } from "../SectionHeading/SectionHeading";
 // Types
 import { PackageName } from "../PackageModal/PackageModal";
 
+// State
+import { LangContext } from "../../state/context/Lang";
+
 interface IPackagesProps {
   setModal: Dispatch<SetStateAction<PackageName>>;
 }
 
 export const Packages: FC<IPackagesProps> = ({ setModal }) => {
+  const { lang } = useContext(LangContext);
   return (
     <section className="Packages" id="paquetes">
-      <SectionHeading heading="Elige su paquete" />
+      <SectionHeading
+        heading={lang === "es" ? "Elige su paquete" : "Choose your package"}
+      />
 
       <div className="Packages__content">
         <div className="package">
           <button onClick={() => setModal("formaleta")}>
             <p className="package__title">
-              <span>Formaleta y Encofrado</span>
+              <span>{lang === "es" ? "Formaleta" : "Formwork"}</span>
             </p>
           </button>
         </div>
         <div className="package">
           <button onClick={() => setModal("gris")}>
             <p className="package__title">
-              <span>Obra Gris</span>
+              <span>{lang === "es" ? "Obra Gris" : "Gray Work"}</span>
             </p>
           </button>
         </div>
         <div className="package">
           <button onClick={() => setModal("todo")}>
             <p className="package__title">
-              <span>Todo Costo</span>
+              <span>{lang === "es" ? "Todo Costo" : "Full Cost"}</span>
             </p>
           </button>
         </div>
       </div>
-      {/* <div className="Packages__wrapper section-wrapper">
-        <h2 className="Packages__heading section-heading--inverted">
-          Packages
-        </h2>
-        <p>
-          We build as much as you want. From the ground up to the finishes, or
-          just the basics. Choose what is best for you.
-        </p>
-      </div> */}
     </section>
   );
 };

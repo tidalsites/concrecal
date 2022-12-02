@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import "./Model.scss";
 
 // Images
@@ -6,6 +6,9 @@ import tipoA from "../../assets/tipo-a.jpg";
 import tipoB from "../../assets/tipo-b.jpg";
 import tipoC from "../../assets/tipo-c.jpg";
 import tipoD from "../../assets/tipo-d.jpg";
+
+// State
+import { LangContext } from "../../state/context/Lang";
 
 interface IModelProps {
   nombre: string;
@@ -24,6 +27,8 @@ export const Model: FC<IModelProps> = ({
   niveles,
   img,
 }) => {
+  const { lang } = useContext(LangContext);
+
   const getImage = () => {
     switch (img) {
       case "a":
@@ -53,12 +58,18 @@ export const Model: FC<IModelProps> = ({
         </div>
 
         <div className="model__info">
-          <span>{habitaciones} Habitaciones</span>
-          <span>{banos} Banos</span>
+          <span>
+            {habitaciones} {lang === "es" ? "Habitaciones" : "Bedrooms"}
+          </span>
+          <span>
+            {banos} {lang === "es" ? "Banos" : "Bathrooms"}
+          </span>
           <span>
             {metros} Mt<sup>2</sup>
           </span>
-          <span>{niveles} Niveles</span>
+          <span>
+            {niveles} {lang === "es" ? "Niveles" : "Levels"}
+          </span>
         </div>
       </div>
     </div>
