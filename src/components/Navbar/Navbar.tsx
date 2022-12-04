@@ -33,21 +33,25 @@ export const Navbar: FC = () => {
             <LangToggle alt={true} />
             <a href="https://wa.me/18292309202">
               <WhatsAppIcon />
+              <span className="visually-hidden">Whatsapp</span>
             </a>
             <a
               href="https://www.instagram.com/concrecalproyectos"
               target="_blank"
             >
               <InstagramIcon />
+              <span className="visually-hidden">Instagram</span>
             </a>
             <a
               href="https://www.facebook.com/concrecal.proyectos"
               target="_blank"
             >
               <FacebookIcon />
+              <span className="visually-hidden">Facebook</span>
             </a>
             <a href="mailto:info@concrecalproyectos.com">
               <EmailIcon />
+              <span className="visually-hidden">Email</span>
             </a>
           </div>
           <div className="Navbar__nav">

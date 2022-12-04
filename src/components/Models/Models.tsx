@@ -91,10 +91,10 @@ export const Models: FC = () => {
             />
           </SwiperSlide>
           <div className="swiper__buttons">
-            <button className="swiper-prev">
+            <button aria-label="Previous Slide" className="swiper-prev">
               <ArrowBackIos fontSize="large" />
             </button>
-            <button className="swiper-next">
+            <button aria-label="Next Slide" className="swiper-next">
               <ArrowForwardIos fontSize="large" />
             </button>
           </div>

@@ -59,6 +59,7 @@ export const Nosotros: FC = () => {
         <div className="Nosotros__statement">
           <div className="Nosotros__statement__btn-group">
             <button
+              aria-label="Previous Slide"
               data-visible={activeSlide !== 0}
               onClick={() => {
                 setActiveSlide(prevSlide());
@@ -67,6 +68,7 @@ export const Nosotros: FC = () => {
               <ArrowBackIos />
             </button>
             <button
+              aria-label="Next Slide"
               data-visible={activeSlide !== 2}
               onClick={() => {
                 setActiveSlide(nextSlide());
