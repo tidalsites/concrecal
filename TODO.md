@@ -1,7 +1,7 @@
 [x] Create packages section
 [x] Create gallery (completed projects) section
 [x] Create Models section
-[] Translate pages
+[x] Translate pages
 [x] Package modal
 [] Package modal content
 [x] Hero parallax
@@ -10,7 +10,7 @@
 [] Transitions
 [x] Fix Slider
 [] PWA
-[] Add Hours
+[x] Add Hours
 [] Autoplay nosotros slider
 [] 508
-[] Navbar offset
+[x] Navbar offset

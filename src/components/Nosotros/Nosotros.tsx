@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useState } from "react";
+import { FC, useContext, useState } from "react";
 import "./Nosotros.scss";
 
 // Components
@@ -16,8 +16,6 @@ type SlideStateIndex = 0 | 1 | 2;
 
 export const Nosotros: FC = () => {
   const [activeSlide, setActiveSlide] = useState<SlideStateIndex>(0);
-  // const [autoPlay, setAutoPlay] = useState<boolean>(true);
-
   const { lang } = useContext(LangContext);
 
   const prevSlide: () => SlideStateIndex = () => {
@@ -42,33 +40,8 @@ export const Nosotros: FC = () => {
     }
   };
 
-  // TODO - Fix autoplay and pause mechanism
-
-  // useEffect(() => {
-  //   let autoPlayInterval;
-  //   if (autoPlay) {
-  //     autoPlayInterval = setInterval(() => {
-  //       switch (activeSlide) {
-  //         case 0:
-  //           setActiveSlide(1);
-  //           break;
-  //         case 1:
-  //           setActiveSlide(2);
-  //           break;
-  //         case 2:
-  //           setActiveSlide(0);
-  //           break;
-  //         default:
-  //           break;
-  //       }
-  //     }, 3000);
-  //   } else {
-  //     clearInterval(autoPlayInterval);
-  //   }
-  // }, [activeSlide, autoPlay]);
-
   return (
-    <section className="Nosotros" id="nosotros">
+    <section className="Nosotros link-target" id="nosotros">
       <SectionHeading heading="Sobre Nosotros" />
       <div className="Nosotros__content">
         <div className="Nosotros__copy">

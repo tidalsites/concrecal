@@ -37,7 +37,7 @@ export const Models: FC = () => {
     });
   }, []);
   return (
-    <section className="Models" id="modelos">
+    <section className="Models link-target" id="modelos">
       <SectionHeading
         heading={lang === "es" ? "Elige su tipo" : "Choose your model"}
       />
@@ -63,9 +63,9 @@ export const Models: FC = () => {
           <SwiperSlide>
             <Model
               nombre={lang === "es" ? "Tipo B" : "Type B"}
-              habitaciones={2}
-              banos={1}
-              metros={240}
+              habitaciones={3}
+              banos={2}
+              metros={110}
               niveles={1}
               img="b"
             />
@@ -91,7 +91,7 @@ export const Models: FC = () => {
             />
           </SwiperSlide>
           <div className="swiper__buttons">
-            <button className="swiper-prev" onClick={() => swiper.slidePrev()}>
+            <button className="swiper-prev">
               <ArrowBackIos fontSize="large" />
             </button>
             <button className="swiper-next">

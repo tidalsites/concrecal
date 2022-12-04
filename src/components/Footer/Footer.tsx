@@ -24,9 +24,9 @@ export const Footer: FC = () => {
               <WhatsAppIcon />
               <span>+1 (829) 230-9202</span>
             </a>
-            <a href="mailto:info@concrecalproyectos.com" target="_blank">
+            <a href="mailto:info@concrecal.com" target="_blank">
               <EmailIcon />
-              <span>info@concrecalproyectos.com</span>
+              <span>info@concrecal.com</span>
             </a>
             <a
               href="https://www.instagram.com/concrecalproyectos"
@@ -50,27 +50,27 @@ export const Footer: FC = () => {
             <ul>
               <li>
                 <span>{lang === "es" ? "Lunes" : "Monday"}</span>
-                <span>7AM - 9PM</span>
+                <span>8AM - 6PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Martes" : "Tuesday"}</span>
-                <span>7AM - 9PM</span>
+                <span>8AM - 6PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Miércoles" : "Wednesday"}</span>
-                <span>7AM - 9PM</span>
+                <span>8AM - 6PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Jueves" : "Thursday"}</span>
-                <span>7AM - 9PM</span>
+                <span>8AM - 6PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Viernes" : "Friday"}</span>
-                <span>7AM - 9PM</span>
+                <span>8AM - 6PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Sábado" : "Saturday"}</span>
-                <span>7AM -12PM</span>
+                <span>9AM -3PM</span>
               </li>
               <li>
                 <span>{lang === "es" ? "Domingo" : "Sunday"}</span>

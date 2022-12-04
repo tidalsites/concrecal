@@ -18,7 +18,7 @@ import { LangContext } from "../../state/context/Lang";
 export const Gallery: FC = () => {
   const { lang } = useContext(LangContext);
   return (
-    <section className="Gallery" id="proyectos">
+    <section className="Gallery link-target" id="proyectos">
       <SectionHeading
         heading={
           lang === "es" ? "ver proyectos terminados" : "View completed projects"

@@ -34,7 +34,10 @@
     justify-content: space-around;
     align-items: flex-end;
     flex-grow: 1;
-    gap: 1rem;
+
+    @media (min-width: u.$mobile-breakpoint) {
+      gap: 1rem;
+    }
   }
 
   &__smedia {

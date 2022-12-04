@@ -83,6 +83,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(c.$black, 0.25);
+  background-position: center;
 
   @media (min-width: u.$mobile-breakpoint) {
     max-width: unset;
@@ -90,7 +91,7 @@
   }
 
   &:nth-child(1) {
-    background-image: url("../../assets/proyecto-uno.jpg");
+    background-image: url("../../assets/formaleta-alt.jpg");
   }
   &:nth-child(2) {
     background-image: url("../../assets/proyecto-dos.jpg");

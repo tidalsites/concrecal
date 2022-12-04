@@ -17,7 +17,7 @@ interface IPackagesProps {
 export const Packages: FC<IPackagesProps> = ({ setModal }) => {
   const { lang } = useContext(LangContext);
   return (
-    <section className="Packages" id="paquetes">
+    <section className="Packages link-target" id="paquetes">
       <SectionHeading
         heading={lang === "es" ? "Elige su paquete" : "Choose your package"}
       />
