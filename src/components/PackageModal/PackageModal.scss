@@ -35,11 +35,69 @@
     animation: slideDown 800ms forwards;
     box-shadow: 0 0 4px 1px c.$black;
     border-radius: 0.5rem;
+    width: clamp(300px, 50vw, 60em);
+
+    &__content {
+      margin-inline: auto;
+      width: fit-content;
+
+      &__title {
+        color: c.$primary;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-left: 1rem;
+        margin-block: 1rem;
+
+        li {
+          text-decoration: underline;
+          text-decoration-color: c.$secondary;
+          background-color: c.$secondary;
+          color: c.$white;
+          padding: 0.5rem 1rem;
+          border-radius: 200px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+
+          &::marker {
+            content: "➤";
+            color: c.$primary;
+          }
+        }
+      }
+    }
   }
 
   &__title {
-    padding-block: 0.5rem;
+    padding-block: 1rem;
     text-transform: capitalize;
+    isolation: isolate;
+    z-index: 1;
+    position: relative;
+
+    h2 {
+      text-align: center;
+      margin-inline: auto;
+      padding-inline: 1rem;
+      background-color: c.$white;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 2px;
+        width: 100%;
+        z-index: -1;
+        background-color: c.$primary;
+      }
+    }
   }
 }
 

@@ -9,9 +9,9 @@ export const Hero: FC = () => {
   const { lang } = useContext(LangContext);
   return (
     <section className="Hero">
-      <video autoPlay muted loop>
+      {/* <video autoPlay muted loop>
         <source src={bgVideo} type="video/mp4" />
-      </video>
+      </video> */}
       <div className="Hero__content">
         <div className="Hero__content__wrapper">
           <p>

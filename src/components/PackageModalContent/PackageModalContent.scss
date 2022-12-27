@@ -1,0 +1,33 @@
+@use "../../styles/Colors.scss" as c;
+
+.PackageModalContent {
+  &__title {
+    color: c.$primary;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    margin-block: 1rem;
+
+    li {
+      text-decoration: underline;
+      text-decoration-color: c.$secondary;
+      background-color: c.$secondary;
+      color: c.$white;
+      padding: 0.5rem 1rem;
+      border-radius: 200px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      &::marker {
+        content: "➤";
+        color: c.$primary;
+      }
+    }
+  }
+}
