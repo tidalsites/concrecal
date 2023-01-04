@@ -20,42 +20,16 @@
     margin-top: u.$navbar-height;
     color: white;
     z-index: 2;
+    padding: 2rem 1rem;
 
     &__wrapper {
       max-width: u.$max-width;
       margin-inline: auto;
       overflow: hidden;
 
-      > div {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.25rem;
-        transform: translateY(-100%);
-        animation: slideDown 750ms linear forwards;
-        padding: 2rem 1rem;
-      }
-
-      span {
-        font-family: "Cinzel";
-      }
-
-      span:nth-child(1) {
-        color: c.$primary;
-        font-size: clamp(2rem, 10vw, 3rem);
-      }
-
-      span:nth-child(2) {
-        color: c.$secondary;
-        font-size: clamp(0.95rem, 5vw, 1.75rem);
-      }
-
       img {
-        // position: absolute;
-        // top: -100%;
-        // animation: slideDown 250ms linear;
         padding-inline: 1rem;
+        width: clamp(250px, 100%, 500px);
       }
     }
 

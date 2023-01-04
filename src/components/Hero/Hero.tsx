@@ -11,16 +11,7 @@ export const Hero: FC = () => {
     <section className="Hero">
       <div className="Hero__content">
         <div className="Hero__content__wrapper">
-          {/* <img src={wordmark} alt="" /> */}
-          {/* <p>
-            {lang === "es"
-              ? "Comience con una base sólida"
-              : "Start with a solid foundation"}
-          </p> */}
-          <div>
-            <span>CONCRECAL</span>
-            <span>PROYECTOS E INGENIERIA SRL</span>
-          </div>
+          <img src={wordmark} alt="" />
         </div>
       </div>
     </section>
