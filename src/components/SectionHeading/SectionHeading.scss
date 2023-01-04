@@ -19,6 +19,7 @@
     > span {
       padding-inline: 0.5rem;
       text-transform: uppercase;
+      max-width: calc(100vw - 1rem);
     }
 
     .icon-group {

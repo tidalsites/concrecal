@@ -20,7 +20,6 @@ import { SectionHeading } from "../SectionHeading/SectionHeading";
 import { LangContext } from "../../state/context/Lang";
 
 export const Models: FC = () => {
-  const swiper = useSwiper();
   const [slidesPerView, setSlidesPerView] = useState<number>(
     window.screen.width <= 800 ? 1 : 2
   );
@@ -86,6 +85,16 @@ export const Models: FC = () => {
               habitaciones={2}
               banos={1}
               metros={68}
+              niveles={1}
+              img="d"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Model
+              nombre={lang === "es" ? "Apartamentos" : "Apartments"}
+              habitaciones={"2-3"}
+              banos={"1-3"}
+              metros={"68-85"}
               niveles={1}
               img="d"
             />

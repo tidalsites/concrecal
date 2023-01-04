@@ -5,14 +5,18 @@
   line-height: 1.8;
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: 1400px;
+      margin-inline: auto;
 
-    @media (min-width: u.$mobile-breakpoint) {
-      flex-direction: row;
+      @media (min-width: u.$mobile-breakpoint) {
+        flex-direction: row;
 
-      > * {
-        width: 50%;
+        > * {
+          width: 50%;
+        }
       }
     }
   }
@@ -68,11 +72,15 @@
     color: c.$white;
     border-top: 8px double c.$white;
     border-bottom: 8px double c.$white;
-
     position: relative;
+    max-width: 600px;
 
     @media (min-width: u.$mobile-breakpoint) {
       border-left: 8px double c.$white;
+    }
+
+    @media (min-width: 1400px) {
+      border-right: 8px double c.$white;
     }
 
     &__btn-group {

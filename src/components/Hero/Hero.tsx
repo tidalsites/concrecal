@@ -1,6 +1,6 @@
 import { FC, useContext } from "react";
 import "./Hero.scss";
-import bgVideo from "../../assets/bg.mp4";
+import wordmark from "../../assets/wordmark.svg";
 
 // State
 import { LangContext } from "../../state/context/Lang";
@@ -9,16 +9,18 @@ export const Hero: FC = () => {
   const { lang } = useContext(LangContext);
   return (
     <section className="Hero">
-      {/* <video autoPlay muted loop>
-        <source src={bgVideo} type="video/mp4" />
-      </video> */}
       <div className="Hero__content">
         <div className="Hero__content__wrapper">
-          <p>
+          {/* <img src={wordmark} alt="" /> */}
+          {/* <p>
             {lang === "es"
               ? "Comience con una base sólida"
               : "Start with a solid foundation"}
-          </p>
+          </p> */}
+          <div>
+            <span>CONCRECAL</span>
+            <span>PROYECTOS E INGENIERIA SRL</span>
+          </div>
         </div>
       </div>
     </section>

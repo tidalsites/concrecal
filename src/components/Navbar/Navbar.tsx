@@ -26,7 +26,9 @@ export const Navbar: FC = () => {
     <div className="Navbar">
       <div className="Navbar__wrapper">
         <div className="Navbar__logo">
-          <img src={updatedLogo} alt="Concrecal Proyectos e Ingeneria SRL" />
+          <a href="#">
+            <img src={updatedLogo} alt="Concrecal Proyectos e Ingeneria SRL" />
+          </a>
         </div>
         <div className="Navbar__links">
           <div className="Navbar__smedia">

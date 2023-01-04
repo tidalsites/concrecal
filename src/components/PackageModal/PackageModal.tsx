@@ -28,19 +28,21 @@ export const PackageModal: FC = () => {
       <div className="PackageModal__wrapper">
         <div className="PackageModal__wrapper__content">
           <div className="PackageModal__title">
-            <h2>{modal.type}</h2>
+            <h2>
+              {lang === "es" ? modal.package_title_es : modal.package_title_en}
+            </h2>
           </div>
           <div className="PackageModal__content">
             <p className="PackageModal__content__title">
-              {lang === "es" ? modal.package_title_es : modal.package_title_en}
+              {lang === "es" ? "Alcanse de estructura" : "Form Work"}
             </p>
             <ul>
               {(() => {
                 return modal.package_list[lang].map((list) => <li>{list}</li>);
               })()}
             </ul>
-            <p>
-              <span>{modal.materials_included ? "🗹" : "✗"}</span>
+            <p className="PackageModal__content__materials">
+              <span>{!modal.materials_included ? "No " : ""}</span>
               <span>
                 {lang === "es" ? "Incluye Materiales" : "Materials Included"}
               </span>

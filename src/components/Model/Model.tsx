@@ -12,11 +12,11 @@ import { LangContext } from "../../state/context/Lang";
 
 interface IModelProps {
   nombre: string;
-  habitaciones: number;
-  banos: number;
-  metros: number;
+  habitaciones: number | string;
+  banos: number | string;
+  metros: number | string;
   niveles: number;
-  img: "a" | "b" | "c" | "d";
+  img: "a" | "b" | "c" | "d" | "apt";
 }
 
 export const Model: FC<IModelProps> = ({
@@ -39,6 +39,8 @@ export const Model: FC<IModelProps> = ({
         return tipoC;
       case "d":
         return tipoD;
+      case "apt":
+        return tipoA;
       default:
         return tipoA;
     }

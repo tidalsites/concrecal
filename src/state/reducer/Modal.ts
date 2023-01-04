@@ -32,12 +32,14 @@ const formaletaListEn = [
 
 // Obra Gris Lists
 const grisListEs = [
-  "terminaciones interiores",
-  "exteriores en estuco",
-  "finos de techos",
+  "Todo en formaleta mas",
+  "Terminaciones interiores",
+  "Exteriores en estuco",
+  "Finos de techos",
 ];
 
 const grisListEn = [
+  "Everything in formaleta plus",
   "Interior finishes",
   "Stucco exteriors",
   "Roofing finishes",
@@ -45,6 +47,7 @@ const grisListEn = [
 
 // Todo Costo Lists
 const todoListEs = [
+  "Todo en obra gris mas",
   "Terminaciones de pisos",
   "Cocinas",
   "Baños",
@@ -53,6 +56,7 @@ const todoListEs = [
 ];
 
 const todoListEn = [
+  "Everything in obra gris plus",
   "Floor finishes",
   "Kitchens",
   "Bathrooms",
@@ -68,8 +72,8 @@ export const ModalReducer = (
     case "formaleta":
       return {
         type: "formaleta",
-        package_title_en: "Frame scope",
-        package_title_es: "Alcanse de estructura",
+        package_title_en: "Formaleta",
+        package_title_es: "Formaleta",
         package_list: {
           en: formaletaListEn,
           es: formaletaListEs,
