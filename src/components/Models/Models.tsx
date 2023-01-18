@@ -51,7 +51,7 @@ export const Models: FC = () => {
         >
           <SwiperSlide>
             <Model
-              nombre={lang === "es" ? "Tipo A" : "Type A"}
+              nombre={lang === "es" ? "Modelo 1" : "Model 1"}
               habitaciones={2}
               banos={2}
               metros={100}
@@ -61,7 +61,7 @@ export const Models: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Model
-              nombre={lang === "es" ? "Tipo B" : "Type B"}
+              nombre={lang === "es" ? "Modelo 2" : "Model 2"}
               habitaciones={3}
               banos={2}
               metros={110}
@@ -71,7 +71,7 @@ export const Models: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Model
-              nombre={lang === "es" ? "Tipo C" : "Type C"}
+              nombre={lang === "es" ? "Modelo 3" : "Model 3"}
               habitaciones={3}
               banos={2.5}
               metros={140}
@@ -81,7 +81,7 @@ export const Models: FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Model
-              nombre={lang === "es" ? "Tipo D" : "Type D"}
+              nombre={lang === "es" ? "Modelo 4" : "Model 4"}
               habitaciones={2}
               banos={1}
               metros={68}
@@ -89,7 +89,7 @@ export const Models: FC = () => {
               img="d"
             />
           </SwiperSlide>
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <Model
               nombre={lang === "es" ? "Apartamentos" : "Apartments"}
               habitaciones={"2-3"}
@@ -98,7 +98,7 @@ export const Models: FC = () => {
               niveles={1}
               img="d"
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
           <div className="swiper__buttons">
             <button aria-label="Previous Slide" className="swiper-prev">
               <ArrowBackIos fontSize="large" />

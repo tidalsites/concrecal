@@ -20,6 +20,7 @@ import { ModalContext } from "../../state/context/Modal";
 
 // Types
 import { defaultModalState } from "../../state/context/Modal";
+import { Apartamentos } from "../Apartamentos/Apartamentos";
 
 function App() {
   const [lang, dispatchLang] = useReducer(LangReducer, "es");
@@ -34,25 +35,10 @@ function App() {
           <Nosotros />
           <Models />
           <Packages />
+          <Apartamentos />
           <Gallery />
           <Footer />
-          {modal.type !== "none" ? (
-            // <PackageModal package_name={modal.type}>
-            //   <PackageModalContent
-            //     title={
-            //       lang === "es"
-            //         ? modal.package_title_es
-            //         : modal.package_title_en
-            //     }
-            //     lists={
-            //       lang === "es" ? modal.package_list.es : modal.package_list.en
-            //     }
-            //   />
-            // </PackageModal>
-            <PackageModal />
-          ) : (
-            ""
-          )}
+          {modal.type !== "none" ? <PackageModal /> : ""}
         </div>
       </ModalContext.Provider>
     </LangContext.Provider>
