@@ -32,14 +32,14 @@ const formaletaListEn = [
 
 // Obra Gris Lists
 const grisListEs = [
-  "Todo en formaleta mas",
+  "Todo en formaleta",
   "Terminaciones interiores",
   "Exteriores en estuco",
   "Finos de techos",
 ];
 
 const grisListEn = [
-  "Everything in formaleta plus",
+  "Everything in formaleta",
   "Interior finishes",
   "Stucco exteriors",
   "Roofing finishes",
@@ -47,7 +47,7 @@ const grisListEn = [
 
 // Todo Costo Lists
 const todoListEs = [
-  "Todo en obra gris mas",
+  "Todo en obra gris",
   "Terminaciones de pisos",
   "Cocinas",
   "Baños",
@@ -56,7 +56,7 @@ const todoListEs = [
 ];
 
 const todoListEn = [
-  "Everything in obra gris plus",
+  "Everything in obra gris",
   "Floor finishes",
   "Kitchens",
   "Bathrooms",

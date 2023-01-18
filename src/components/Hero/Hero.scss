@@ -10,14 +10,13 @@
   position: relative;
   z-index: -1;
   background-color: c.$primary;
-  background-image: url("../../assets/gris.jpg");
+  background-image: url("../../assets/splash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   &__content {
-    background-color: rgba(white, 0.75);
-    margin-top: u.$navbar-height;
+    background-color: rgba(white, 0.9);
     color: white;
     z-index: 2;
     padding: 2rem 1rem;
@@ -26,6 +25,8 @@
       max-width: u.$max-width;
       margin-inline: auto;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
 
       img {
         padding-inline: 1rem;

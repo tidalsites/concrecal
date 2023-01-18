@@ -80,7 +80,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      margin-left: 1rem;
+      // margin-left: 1rem;
       margin-block: 1rem;
 
       li {
@@ -93,10 +93,10 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
 
-        &::marker {
-          content: "➤";
-          color: c.$primary;
-        }
+        // &::marker {
+        //   content: "➤";
+        //   color: c.$primary;
+        // }
       }
     }
   }

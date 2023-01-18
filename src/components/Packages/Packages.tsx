@@ -1,19 +1,12 @@
-import { FC, SetStateAction, Dispatch, useContext } from "react";
+import { FC, useContext } from "react";
 import "./Packages.scss";
 
 // Components
 import { SectionHeading } from "../SectionHeading/SectionHeading";
 
-// Types
-import { PackageName } from "../PackageModal/PackageModal";
-
 // State
 import { LangContext } from "../../state/context/Lang";
 import { ModalContext } from "../../state/context/Modal";
-
-interface IPackagesProps {
-  setModal: Dispatch<SetStateAction<PackageName>>;
-}
 
 export const Packages: FC = () => {
   const { lang } = useContext(LangContext);
