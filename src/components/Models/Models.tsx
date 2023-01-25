@@ -38,7 +38,7 @@ export const Models: FC = () => {
   return (
     <section className="Models link-target" id="modelos">
       <SectionHeading
-        heading={lang === "es" ? "Elige su tipo" : "Choose your model"}
+        heading={lang === "es" ? "Elige su modelo" : "Choose your model"}
       />
       <div className="Models__content">
         <Swiper
@@ -89,16 +89,16 @@ export const Models: FC = () => {
               img="d"
             />
           </SwiperSlide>
-          {/* <SwiperSlide>
+          <SwiperSlide>
             <Model
               nombre={lang === "es" ? "Apartamentos" : "Apartments"}
               habitaciones={"2-3"}
               banos={"1-3"}
-              metros={"68-85"}
-              niveles={1}
-              img="d"
+              metros={"-"}
+              niveles={"2-5"}
+              img="apt"
             />
-          </SwiperSlide> */}
+          </SwiperSlide>
           <div className="swiper__buttons">
             <button aria-label="Previous Slide" className="swiper-prev">
               <ArrowBackIos fontSize="large" />

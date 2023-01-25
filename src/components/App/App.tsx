@@ -20,7 +20,7 @@ import { ModalContext } from "../../state/context/Modal";
 
 // Types
 import { defaultModalState } from "../../state/context/Modal";
-import { Apartamentos } from "../Apartamentos/Apartamentos";
+// import { Apartamentos } from "../Apartamentos/Apartamentos";
 
 function App() {
   const [lang, dispatchLang] = useReducer(LangReducer, "es");
@@ -35,7 +35,7 @@ function App() {
           <Nosotros />
           <Models />
           <Packages />
-          <Apartamentos />
+          {/* <Apartamentos /> */}
           <Gallery />
           <Footer />
           {modal.type !== "none" ? <PackageModal /> : ""}

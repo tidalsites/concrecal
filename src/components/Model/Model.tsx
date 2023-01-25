@@ -6,6 +6,7 @@ import tipoA from "../../assets/tipo-a.jpg";
 import tipoB from "../../assets/tipo-b.jpg";
 import tipoC from "../../assets/tipo-c.jpg";
 import tipoD from "../../assets/tipo-d.jpg";
+import apt from "../../assets/apartments5.jpg";
 
 // State
 import { LangContext } from "../../state/context/Lang";
@@ -15,7 +16,7 @@ interface IModelProps {
   habitaciones: number | string;
   banos: number | string;
   metros: number | string;
-  niveles: number;
+  niveles: number | string;
   img: "a" | "b" | "c" | "d" | "apt";
 }
 
@@ -40,7 +41,7 @@ export const Model: FC<IModelProps> = ({
       case "d":
         return tipoD;
       case "apt":
-        return tipoA;
+        return apt;
       default:
         return tipoA;
     }
