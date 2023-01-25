@@ -33,7 +33,7 @@ export const Navbar: FC = () => {
         <div className="Navbar__links">
           <div className="Navbar__smedia">
             <LangToggle alt={true} />
-            <a href="https://wa.me/18292309202">
+            <a href="https://wa.me/18097523000">
               <WhatsAppIcon />
               <span className="visually-hidden">Whatsapp</span>
             </a>

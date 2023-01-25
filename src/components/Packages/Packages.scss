@@ -79,10 +79,8 @@
   justify-content: center;
   align-items: flex-end;
   background-image: url("../../assets/proyecto-uno.jpg");
-  background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(c.$black, 0.25);
   background-position: center;
 
   @media (min-width: u.$mobile-breakpoint) {
@@ -119,6 +117,7 @@
     color: c.$white;
     display: flex;
     flex-direction: column;
+    background-color: rgba(c.$black, 0.75);
 
     span {
       flex-grow: 1;

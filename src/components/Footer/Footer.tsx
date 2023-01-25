@@ -20,10 +20,15 @@ export const Footer: FC = () => {
             <span className="Footer__column-header">
               {lang == "es" ? "Contacto" : "Contact"}
             </span>
-            <a href="https://wa.me/18292309202" target="_blank">
+            <a href="https://wa.me/18097523000" target="_blank">
               <WhatsAppIcon />
               <span className="visually-hidden">Whatsapp</span>
-              <span>+1 (829) 230-9202</span>
+              <span>+1 (809) 752-3000</span>
+            </a>
+            <a href="https://wa.me/18098314609" target="_blank">
+              <WhatsAppIcon />
+              <span className="visually-hidden">Whatsapp</span>
+              <span>+1 (809) 831-4609</span>
             </a>
             <a href="mailto:info@concrecal.com" target="_blank">
               <EmailIcon />

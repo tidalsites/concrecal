@@ -51,6 +51,16 @@ export const Models: FC = () => {
         >
           <SwiperSlide>
             <Model
+              nombre={lang === "es" ? "Apartamentos" : "Apartments"}
+              habitaciones={"2-3"}
+              banos={"1-3"}
+              metros={"-"}
+              niveles={"2-5"}
+              img="apt"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Model
               nombre={lang === "es" ? "Modelo 1" : "Model 1"}
               habitaciones={2}
               banos={2}
@@ -87,16 +97,6 @@ export const Models: FC = () => {
               metros={68}
               niveles={1}
               img="d"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Model
-              nombre={lang === "es" ? "Apartamentos" : "Apartments"}
-              habitaciones={"2-3"}
-              banos={"1-3"}
-              metros={"-"}
-              niveles={"2-5"}
-              img="apt"
             />
           </SwiperSlide>
           <div className="swiper__buttons">
