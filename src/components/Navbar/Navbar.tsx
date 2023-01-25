@@ -51,7 +51,7 @@ export const Navbar: FC = () => {
               <FacebookIcon />
               <span className="visually-hidden">Facebook</span>
             </a>
-            <a href="mailto:info@concrecalproyectos.com">
+            <a href="mailto:info@concrecal.com">
               <EmailIcon />
               <span className="visually-hidden">Email</span>
             </a>
